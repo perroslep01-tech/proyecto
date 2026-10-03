@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZONA GAMER</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ZONA GAMER</h1>
+        <p>Todo sobre tus videojuegos favoritos</p>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#juegos">Juegos</a>
+            <a href="#noticias">Noticias</a>
+            <a href="#reventa">Reventa</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- INICIO -->
+        <section id="inicio" class="inicio">
+            <h2>Bienvenido a Zona Gamer</h2>
+
+            <p>
+                Aquí encontrarás información sobre algunos de los videojuegos
+                más conocidos, noticias y una sección para publicar juegos
+                de segunda mano.
+            </p>
+
+            <a href="#juegos" class="boton">Ver juegos</a>
+        </section>
+
+
+        <!-- BÚSQUEDA -->
+        <section class="busqueda">
+            <h2>Buscar un juego</h2>
+
+            <input 
+                type="text" 
+                id="buscador" 
+                placeholder="Escribe el nombre de un juego..."
+            >
+
+            <div id="resultadoBusqueda"></div>
+        </section>
+
+
+        <!-- JUEGOS -->
+        <section id="juegos">
+
+            <h2>Videojuegos</h2>
+
+            <div class="contenedor-juegos">
+
+                <!-- MINECRAFT -->
+                <div class="tarjeta-juego">
+
+                    <img src="main.png" alt="Minecraft">
+
+                    <h3>Minecraft</h3>
+
+                    <p>
+                        Construye, explora y sobrevive en un mundo lleno
+                        de posibilidades.
+                    </p>
+
+                    <button onclick="mostrarJuego('minecraft')">
+                        Ver juego
+                    </button>
+
+                    <div id="minecraft" class="informacion-juego">
+                        <h3>Minecraft</h3>
+
+                        <p>
+                            Minecraft es un videojuego de construcción y
+                            supervivencia donde puedes explorar diferentes
+                            mundos, conseguir recursos y construir todo tipo
+                            de estructuras.
+                        </p>
+
+                        <p><b>Género:</b> Supervivencia y construcción</p>
+                        <p><b>Desarrollador:</b> Mojang Studios</p>
+
+                        <button onclick="cerrarJuego('minecraft')">
+                            Cerrar
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <!-- GTA V -->
+                <div class="tarjeta-juego">
+
+                    <img src="gta.png" alt="GTA V">
+
+                    <h3>GTA V</h3>
+
+                    <p>
+                        Explora Los Santos y vive una historia llena
+                        de acción.
+                    </p>
+
+                    <button onclick="mostrarJuego('gta')">
+                        Ver juego
+                    </button>
+
+                    <div id="gta" class="informacion-juego">
+                        <h3>Grand Theft Auto V</h3>
+
+                        <p>
+                            GTA V es un juego de acción y mundo abierto
+                            ambientado en la ciudad ficticia de Los Santos.
+                        </p>
+
+                        <p><b>Género:</b> Acción y mundo abierto</p>
+                        <p><b>Desarrollador:</b> Rockstar Games</p>
+
+                        <button onclick="cerrarJuego('gta')">
+                            Cerrar
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <!-- FORTNITE -->
+                <div class="tarjeta-juego">
+
+                    <img src="fortnite.png" alt="Fortnite">
+
+                    <h3>Fortnite</h3>
+
+                    <p>
+                        Lucha contra otros jugadores y trata de ser
+                        el último en pie.
+                    </p>
+
+                    <button onclick="mostrarJuego('fortnite')">
+                        Ver juego
+                    </button>
+
+                    <div id="fortnite" class="informacion-juego">
+
+                        <h3>Fortnite</h3>
+
+                        <p>
+                            Fortnite es un videojuego que combina acción,
+                            construcción y diferentes modos de juego.
+                        </p>
+
+                        <p><b>Género:</b> Battle Royale y acción</p>
+                        <p><b>Desarrollador:</b> Epic Games</p>
+
+                        <button onclick="cerrarJuego('fortnite')">
+                            Cerrar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ROBLOX -->
+                <div class="tarjeta-juego">
+
+                    <img src="roblox.png" alt="Roblox">
+
+                    <h3>Roblox</h3>
+
+                    <p>
+                        Juega miles de experiencias creadas por
+                        diferentes usuarios.
+                    </p>
+
+                    <button onclick="mostrarJuego('roblox')">
+                        Ver juego
+                    </button>
+
+                    <div id="roblox" class="informacion-juego">
+
+                        <h3>Roblox</h3>
+
+                        <p>
+                            Roblox es una plataforma donde los usuarios
+                            pueden jugar y crear diferentes experiencias.
+                        </p>
+
+                        <p><b>Tipo:</b> Plataforma de videojuegos</p>
+                        <p><b>Desarrollador:</b> Roblox Corporation</p>
+
+                        <button onclick="cerrarJuego('roblox')">
+                            Cerrar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOTICIAS -->
+        <section id="noticias">
+
+            <h2>Noticias Gamer</h2>
+
+            <div class="noticias">
+
+                <article>
+                    <h3>Nuevos videojuegos</h3>
+
+                    <p>
+                        Cada año aparecen nuevos videojuegos con diferentes
+                        historias, gráficos y formas de jugar.
+                    </p>
+
+                    <button onclick="leerNoticia('noticia1')">
+                        Leer más
+                    </button>
+
+                    <p id="noticia1" class="texto-noticia">
+                        La industria de los videojuegos continúa creciendo
+                        y aparecen nuevos títulos para PC y consolas.
+                    </p>
+                </article>
+
+
+                <article>
+                    <h3>Videojuegos multijugador</h3>
+
+                    <p>
+                        Los juegos online permiten jugar con amigos
+                        y personas de diferentes lugares.
+                    </p>
+
+                    <button onclick="leerNoticia('noticia2')">
+                        Leer más
+                    </button>
+
+                    <p id="noticia2" class="texto-noticia">
+                        Los modos multijugador se han convertido en una
+                        parte importante de muchos videojuegos actuales.
+                    </p>
+                </article>
+
+
+                <article>
+                    <h3>La evolución de los videojuegos</h3>
+
+                    <p>
+                        Los videojuegos han cambiado mucho desde sus
+                        primeros años.
+                    </p>
+
+                    <button onclick="leerNoticia('noticia3')">
+                        Leer más
+                    </button>
+
+                    <p id="noticia3" class="texto-noticia">
+                        Los gráficos, sonidos y sistemas de juego han
+                        evolucionado con el paso del tiempo.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- REVENTA -->
+        <section id="reventa">
+
+            <h2>Publicar juego en reventa</h2>
+
+            <p>
+                ¿Tienes un juego que ya no utilizas? Puedes publicar
+                información sobre él.
+            </p>
+
+            <form class="formulario-reventa" id="formReventa">
+
+                <label for="nombreJuego">
+                    Nombre del juego
+                </label>
+
+                <input 
+                    type="text" 
+                    id="nombreJuego"
+                    placeholder="Ejemplo: Minecraft"
+                >
+
+
+                <label for="precioJuego">
+                    Precio
+                </label>
+
+                <input 
+                    type="number" 
+                    id="precioJuego"
+                    placeholder="Ejemplo: 20"
+                >
+
+
+                <label for="razonReventa">
+                    ¿Por qué lo vendes?
+                </label>
+
+                <textarea 
+                    id="razonReventa"
+                    placeholder="Escribe la razón..."
+                ></textarea>
+
+
+                <button type="submit">
+                    Publicar juego
+                </button>
+
+            </form>
+
+
+            <div id="resultadoReventa"></div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+
+            <h2>Contacto</h2>
+
+            <p>
+                ¿Tienes alguna pregunta o sugerencia?
+            </p>
+
+            <form class="formulario-contacto">
+
+                <label for="nombre">
+                    Nombre
+                </label>
+
+                <input 
+                    type="text" 
+                    id="nombre"
+                    placeholder="Tu nombre"
+                >
+
+
+                <label for="correo">
+                    Correo
+                </label>
+
+                <input 
+                    type="email" 
+                    id="correo"
+                    placeholder="Tu correo"
+                >
+
+
+                <label for="mensaje">
+                    Mensaje
+                </label>
+
+                <textarea 
+                    id="mensaje"
+                    placeholder="Escribe tu mensaje..."
+                ></textarea>
+
+
+                <button type="button" onclick="enviarMensaje()">
+                    Enviar
+                </button>
+
+            </form>
+
+            <p id="mensajeContacto"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <h3>ZONA GAMER</h3>
+
+        <p>
+            Página creada como proyecto de videojuegos.
+        </p>
+
+        <p>
+            © 2026 Zona Gamer
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
